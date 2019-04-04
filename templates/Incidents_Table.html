@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Employee Records</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/Employees_Table.css" th:href="../static/css/Employees_Table.css">
+    <title>Incidents</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/Incidents_Table.css" th:href="../static/css/Incidents_Table.css">
 </head>
     <body>
 		<div id="header">
@@ -12,45 +12,43 @@
         <ul id="nav">
 			<li><a href="index.html">Home</a></li>
             <li><a href="PatientRecords_Table.html">Patient Records</a></li>
-			<li><a class="active" href="Employees_Table.html">Employee Records</a></li>
+			<li><a href="Employees_Table.html">Employee Records</a></li>
             <li><a href="TherapySessions_Table.html">Therapy Sessions</a></li>
 			<li><a href="TherapyProgressNotes_Table.html">Therapy Progress Notes</a></li>
-			<li><a href="Incidents_Table.html">Incidents</a></li>
+			<li><a class="active" href="Incidents_Table.html">Incidents</a></li>
             <li><a href="Reports.html">Reports</a></li>
 		</ul>
 		</div>
 		<div class="row">
 			<div class="box">
 				<h1>
-				<a href="AddEmployeeForm.html">Add Therapist</a>
+				<a href="AddIncident.html">Add Incident</a>
 				</h1> </div>
 			<div class="box">
 				<h1>
-				<a href="ModifyEmployeeTable.html">Modify Therapist</a>
+				<a href="ModifyIncident.html">Modify Incident</a>
 				</h1></div>
 			<div class="box">
 				<h1>
-				<a href="DeleteEmployeeTable.html">Delete Therapist</a>
+				<a href="DeleteIncident.html">Delete Incident</a>
 				</h1></div>
 		</div>
-		<center> <input style="text-align:center;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Therapist Name" title="Type Therapist's Name"> </center>
+		<center> <input style="text-align:center;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Incident Type" title="Type Incident Type"> </center>
 		<center> 
 		<table id="myTable">
 		<tr class="header">
-			<th>Therapist ID</th>
-			<th>Therapist Name</th>
-			<th>Start Date</th>
-			<th>Email</th>
-			<th>Phone Number</th>
-			<th>Therapist Status</th>
+			<th>Incident ID</th>
+			<th>Incident Type</th>
+			<th>Therapy Session ID</th>
+			<th>Notes</th>
+			<th>Incident Status</th>
 		</tr>
 		<tr>
-			<td>001</td>
-			<td>Maria Anders</td>
-			<td>03-25-2018</td>
-			<td>mariaanders@gmail.com</td>
-			<td>8984516935</td>
-			<td>Active</td>
+			<td>1</td>
+			<td>Insubordination</td>
+			<td>4</td>
+			<td>Did not follow orders and rules</td>
+			<td>Closed</td>
 		</tr>
 		</table>
 		</center>
@@ -74,5 +72,5 @@
   }
 }
 </script>
-    </body>
+</body>
 </html>
