@@ -13,82 +13,82 @@
             <li><a class="active" href="PatientRecords_Table.html">Patient Records</a></li>
 			<li><a href="Employees_Table.html">Employee Records</a></li>
             <li><a href="TherapySessions_Table.html">Therapy Sessions</a></li>
+			<li><a href="TherapyProgressNotes_Table.html">Therapy Progress Notes</a></li>
+			<li><a href="Incidents_Table.html">Incidents</a></li>
             <li><a href="Reports.html">Reports</a></li>
 		</ul>
 		</div>
     <center> <form class="addPatient">
-		<h1> Add Patient Form </h1>
-		First name:<br>
-		<input type="text" name="firstname"><br>
-		Last name:<br>
-		<input type="text" name="lastname"></br>
-		Sex:<br>
-		<select name="sex">
+		<h1> Add Patient Form </h1><p2><div class="requiredKey">Required</div></p2><br></br>
+		<p1><div class="required">First name:
+		<input type="text" name="firstname"></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;Last name:
+		<input type="text" name="lastname"></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;Sex:
+		<select name="sex" placeholder="">
 			<option value="male">Male</option>
 			<option value="female">Female</option>
-		</select></br>
-		Address:<br>
-		<input type="text" name="address"></br>
-		Region:<br>
-		<select name="region">
+		</select></div></p1>
+		<br></br>Date of Birth:
+		<input type="date" name="dob" >
+		&nbsp;Start Date:
+		<input type="date" name="startdate">
+		<br></br><p1>Address:
+		<input type="text" name="address"></p1>
+		City:
+		<input type="text" name="city">
+		<p2>ZIP Code:
+		<input type="text" name="zipcode"></p2>
+		<br></br><p1>Region:
+		<select name="region" placeholder="Texas">
 			<option value="texas">Texas</option>
 			<option value="california">California</option>
 			<option value="newmexico">New Mexico</option>
-		</select></br>
-		Country:<br>
-		<select name="country">
+		</select></p1>
+		Country:
+		<select name="country" placeholder="United States">
 			<option value="usa">United States</option>
 			<option value="mexico">Mexico</option>
 			<option value="canada">Canada</option>
-		</select></br>
-		Email:<br>
-		<input type="text" name="email"></br>
-		DOB:<br>
-		<input type="text" name="dob"></br>
-		Home Phone:<br>
-		<input type="text" name="hphone"></br>
-		Mobile Phone:<br>
-		<input type="text" name="mphone"></br>
-		Allergies:<br>
+		</select>
+		<p2>Email:
+		<input type="text" name="email"></p2>
+		<br></br><p1>Primary Phone:
+		<input type="text" name="pphone" placeholder="XXX-XXX-XXXX"></p1>
+		&nbsp;&nbsp;Secondary Phone:
+		<input type="text" name="sphone" placeholder="XXX-XXX-XXXX">
+		<br></br><p1>&nbsp;Allergies:
 		<select name="allergies">
 			<option value="milk">Milk</option>
 			<option value="peanut">Peanut</option>
 			<option value="latex">Latex</option>
-		</select></br>
-		Medications:<br>
-		<input type="text" name="medications"></br>
-		Patient Status:<br>
+		</select></p1>
+		<p1>&nbsp;Medications:
+		<input type="text" name="medications"><p1>
+		<p2>&nbsp;Patient Status:
 		<select name="patientstatus">
 			<option value="active">Active</option>
 			<option value="inactive">Inactive</option>
-		</select></br>
-		Insurance:<br>
-		<select name="insurance">
+		</select></p2>
+		<p1>&nbsp;Insurance:
+		<select name="insurance" placeholder="">
 			<option value="tchp">TCHP</option>
 			<option value="chc">CHC</option>
 			<option value="uhc">UHC</option>
 			<option value="cshcn">CSHCN</option>
 			<option value="tmhp">TMHP</option>
-		</select></br> <br></br>
-		<input type="submit" value="Submit">
-	<center> <button onclick="goBack()">Exit</button></center>
+		</select></p1> <br></br>
+		<center><input type="submit" value="Submit"></center>
+		</form></center>
+		<center><button class="exitButton" onclick="goBack()">Exit</button><center>
 		<script>
 			function goBack() {
-				window.history.back();
+				window.open("PatientRecords_Table.html", "_self");
 			}
 		</script>
-		</form> </center>
-		<style type="text/css">
-		.addPatient{
-		max-width: 450px;
-		background: #FAFAFA;
-		padding: 30px;
-		margin: 50px auto;
-		box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
-		border-radius: 10px;
-		border: 6px solid #305A72;
-		}
-
-	</style>
+		<script>
+			var dateControl = document.querySelector('input[type="date"]');
+			dateControl.value = 'YYYY/MM/DD';
+		</script>
     </body>
 </html>
