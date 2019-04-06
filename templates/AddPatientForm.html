@@ -11,7 +11,7 @@
         <ul id="nav">
 			<li><a href="index.html">Home</a></li>
             <li><a class="active" href="PatientRecords_Table.html">Patient Records</a></li>
-			<li><a href="Employees_Table.html">Employee Records</a></li>
+			<li><a href="Employees_Table.html">Therapist Records</a></li>
             <li><a href="TherapySessions_Table.html">Therapy Sessions</a></li>
 			<li><a href="TherapyProgressNotes_Table.html">Therapy Progress Notes</a></li>
 			<li><a href="Incidents_Table.html">Incidents</a></li>
@@ -19,65 +19,70 @@
 		</ul>
 		</div>
     <center> <form class="addPatient">
-		<h1> Add Patient Form </h1><p2><div class="requiredKey">Required</div></p2><br></br>
+		<h1> Intake Form </h1><p2><div class="requiredKey">Required</div></p2><br></br>
 		<p1><div class="required">First name:
-		<input type="text" name="firstname"></div></p1>
+		<input type="text" name="firstname" maxlength="50"></div></p1>
 		<p1><div class="required">&nbsp;&nbsp;&nbsp;Last name:
-		<input type="text" name="lastname"></div></p1>
+		<input type="text" name="lastname" maxlength="50"></div></p1>
 		<p1><div class="required">&nbsp;&nbsp;&nbsp;Sex:
-		<select name="sex" placeholder="">
+		<select name="sex" placeholder="" maxlength="10">
 			<option value="male">Male</option>
 			<option value="female">Female</option>
 		</select></div></p1>
-		<br></br>Date of Birth:
-		<input type="date" name="dob" >
-		&nbsp;Start Date:
-		<input type="date" name="startdate">
-		<br></br><p1>Address:
-		<input type="text" name="address"></p1>
-		City:
-		<input type="text" name="city">
-		<p2>ZIP Code:
-		<input type="text" name="zipcode"></p2>
-		<br></br><p1>Region:
-		<select name="region" placeholder="Texas">
+		<br></br><p1><div class="required" maxlength="10">Date of Birth:
+		<input type="date" name="dob" size="4"></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;Start Date:
+		<input type="date" name="startdate" maxlength="10" size="4"></div></p1>
+		<br></br><p1><div class="required">Address:
+		<input type="text" name="address" maxlength="255"></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;City:
+		<input type="text" name="city" maxlength="100"></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;ZIP Code:
+		<input type="text" name="zipcode" maxlength="10"></div></p1>
+		<br></br><p1><div class="required">Region:
+		<select name="region" placeholder="Texas" maxlength="10">
 			<option value="texas">Texas</option>
 			<option value="california">California</option>
 			<option value="newmexico">New Mexico</option>
-		</select></p1>
-		Country:
-		<select name="country" placeholder="United States">
+		</select></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;Country:
+		<select name="country" placeholder="United States" maxlength="10">
 			<option value="usa">United States</option>
 			<option value="mexico">Mexico</option>
 			<option value="canada">Canada</option>
-		</select>
-		<p2>Email:
-		<input type="text" name="email"></p2>
-		<br></br><p1>Primary Phone:
-		<input type="text" name="pphone" placeholder="XXX-XXX-XXXX"></p1>
-		&nbsp;&nbsp;Secondary Phone:
-		<input type="text" name="sphone" placeholder="XXX-XXX-XXXX">
-		<br></br><p1>&nbsp;Allergies:
-		<select name="allergies">
+		</select></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;Email:
+		<input type="text" name="email" maxlength="100"></div></p1>
+		<br></br><p1><div class="required">Primary Phone:
+		<input type="text" name="pphone" placeholder="XXX-XXX-XXXX" maxlength="13"></div></p1>
+		<p1>&nbsp;&nbsp;&nbsp;Secondary Phone:
+		<input type="text" name="sphone" placeholder="XXX-XXX-XXXX" maxlength="13"></p1>
+		<br></br><p1>Allergies:
+		<select name="allergies" placeholder="milk">
+			<option value="none">None</option>
 			<option value="milk">Milk</option>
 			<option value="peanut">Peanut</option>
 			<option value="latex">Latex</option>
 		</select></p1>
-		<p1>&nbsp;Medications:
-		<input type="text" name="medications"><p1>
-		<p2>&nbsp;Patient Status:
-		<select name="patientstatus">
-			<option value="active">Active</option>
-			<option value="inactive">Inactive</option>
-		</select></p2>
-		<p1>&nbsp;Insurance:
+		<p1>&nbsp;&nbsp;&nbsp;Medication:
+		<select name="medication" placeholder="none">
+			<option value="none">None</option>
+			<option value="adderall">Adderall</option>
+			<option value="tylenol">Tylenol</option>
+		</select></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;Insurance:
 		<select name="insurance" placeholder="">
 			<option value="tchp">TCHP</option>
 			<option value="chc">CHC</option>
 			<option value="uhc">UHC</option>
 			<option value="cshcn">CSHCN</option>
 			<option value="tmhp">TMHP</option>
-		</select></p1> <br></br>
+		</select></div></p1>
+		<p1><div class="required">&nbsp;&nbsp;&nbsp;Patient Status:
+		<select name="patientstatus" placeholder="active" maxlength="10">
+			<option value="active">Active</option>
+			<option value="inactive">Inactive</option>
+		</select></div></p1><br></br>
 		<center><input type="submit" value="Submit"></center>
 		</form></center>
 		<center><button class="exitButton" onclick="goBack()">Exit</button><center>
