@@ -21,30 +21,32 @@
 		<center>
 		<img src="../static/images/PRS.png" alt="PRS" height="176" width="183"> <br></br>
 		</center>
-		<div class="intro">
-			<p class="text-center">Patient Record System has the functionality to view, add, modify, and delete patient records, employee records, therapy sessions, therapy progress notes, and incidents. PRS is also capable of generating reports such as a therapy progress
-				note, active patient personal information, therapy sessions conducted by month, and incidents by patient.</p>
-		</div>
 		<br></br>
 		<div class="row">
-			<div class="box">
+			<div onclick="location.href='PatientRecords_Table.html';">
+				<div class="box">
 					<h3>Patient Records</h3>
-					<p class="description">Track all patients and their personal information as well as medication and allergies.</p><a href="PatientRecords_Table.html" class="learn-more">View »</a></div>
-			<div class="box">
-					<h3>Therapy Sessions</h3>
-					<p class="description">Track therapy sessions and their information such as date, start time, end time, and medication.</p><a href="TherapySessions_Table.html" class="learn-more">View »</a></div>
-			<div class="box">
+					<p class="description">Track patients and their personal information as well as medication, allergies, and status.<br></br></p></div></div>
+			<div onclick="location.href='Therapist_Table.html';">
+				<div class="box">
 					<h3>Therapist Records</h3>
-					<p class="description">Track all therapists and their personal information as well as <br /></p><a href="Therapist_Table.html" class="learn-more">View »</a></div>
-			<div class="box">
-					<h3 class="name">Therapy Progress Notes</h3>
-					<p class="description">Able to create, modify, or delete SOAP notes for a therapy session.</p><a href="TherapyProgressNotes_Table.html.html" class="learn-more">View »</a></div>
-			<div class="box">
+					<p class="description">Track therapists and their personal information as well as their status.<br></br></p></div></div>
+			<div onclick="location.href='TherapySessions_Table.html';">
+				<div class="box">
+					<h3>Therapy Sessions</h3>
+					<p class="description">Track therapy sessions and their information such as date, start time, end time, and medication.<br></br></p></div></div>
+			<div onclick="location.href='TherapyProgressNotes_Table.html';">
+				<div class="box">
+					<h3 class="name">Therapy Notes</h3>
+					<p class="description">Track therapy notes for a therapy session such as inverention and Speech CPT, therapy SOAP notes, and discharge plan.<br></br></p></div></div>
+			<div onclick="location.href='Incidents_Table.html';">
+				<div class="box">
 					<h3 class="name">Incidents</h3>
-					<p class="description">Track patient and employee incidents as well as date and time of an incident.</p><a href="Incidents.html" class="learn-more">View »</a></div>
-			<div class="box">
+					<p class="description">Track patient and therapist incidents that occured in a therapy session as well as date and time of an incident.<br></br></p></div></div>
+			<div onclick="location.href='Reports.html';">
+				<div class="box">
 					<h3 class="name">Reports</h3>
-					<p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="Reports.html" class="learn-more">View »</a></div>
+					<p class="description">Generate reports used by the business based off Patient Records, Therapist Records, Therapy Sessions, Therapy Notes, and Incidents.</p></div></div>
 		</div>
     </body>
 </html>
