@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Modify Patient</title>
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Add Therapist </title>
     <link rel="stylesheet" type="text/css" href="../static/css/ModifyTherapySessionForm.css" th:href="../static/css/ModifyTherapySessionForm.css">
 </head>
 <body>
@@ -10,26 +8,21 @@
     <div id="logo"></div>
     <ul id="nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="PatientRecords_Table.html">Patient Records</a></li>
-        <li><a href="Therapist_Table.html">Therapist Records</a></li>
-        <li><a class= "active" href="TherapySessions_Table.html">Therapy Sessions</a></li>
-        <li><a href="TherapyProgressNotes_Table.html">Therapy Notes</a></li>
+        <li><a href="Therapist_Table.html"> Patient Records</a></li>
+        <li><a href="Therapist_Table.html"> Therapist Records</a></li>
+        <li><a class="active" href="TherapySessions_Table.html"> Therapy Sessions</a></li>
         <li><a href="Incidents_Table.html">Incidents</a></li>
         <li><a href="Reports.html">Reports</a></li>
     </ul>
 </div>
-<center><form class="modifyTherapySessionFormID">
-    <center>Therapy ID:
-        <input type="text" name="TherapyID" maxlength="10">&nbsp;&nbsp;&nbsp;<button onclick="modifyTherapySessionForm()">Modify</button>
-</form></center>
-<center> <form class="modifyTherapySessionForm">
+<center> <form class="addTherapy">
     <h1> Therapy Session </h1><p2><div class="requiredKey">Required</div></p2><br><br>
-    <p1><div class="required">&nbsp;&nbsp;&nbsp;Therapist Name:
-        <select name="TherapistName" placeholder="">
-        </select></div></p1>
-    <p1><div class="required">&nbsp;&nbsp;&nbsp;Patient Name:
-        <select name="TherapistName" placeholder="">
-        </select></div></p1>
+    <p1><div class="required">Therapist Name:
+        <input name="TherapistName" type="text" placeholder="Enter Therapist Name" autocomplete="on">
+        </input></div></p1>
+    <p1><div class="required">Patient Name:
+        <input name="PatientName" type="text" placeholder="Enter Patient Name" autocomplete="on">
+        </input></div></p1>
     <br><br><p1><div class="required">Session Date:
     <input name="Sessiondate" type="date" size="5" maxlength="10"></div></p1>
     <br><br><p1><div class="required">Session Start Time:
@@ -43,13 +36,11 @@
         <option value="inactive">Inactive</option>
     </select></div></center><br><br>
     <center><input type="submit" value="Submit"></center>
+
+    <input type="button" onclick="location.href='ModifyTherapyProgressNotes.html';" value="Next" />
+
 </form></center>
 <center><button class="exitButton" onclick="goBack()">Exit</button><center>
-    <script>
-        function modifyTherapySessionForm() {
-
-        }
-    </script>
     <script>
         function goBack() {
             window.open("TherapySessions_Table.html", "_self");
@@ -59,5 +50,5 @@
         var dateControl = document.querySelector('input[type="date"]');
         dateControl.value = 'YYYY/MM/DD';
     </script>
-</body>
-</html>
+
+</center></center></body></html>
